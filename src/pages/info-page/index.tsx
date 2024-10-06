@@ -17,7 +17,7 @@ import {ReportForm} from "../../components/report-form";
 export function InfoPage() {
     const {id} = useParams();
     const location = useLocation();
-    const [data, setData] = useState<CarCardsType[] | undefined>(undefined);
+    const [data, setData] = useState<CarCardsType[] | undefined>(testData);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
@@ -27,20 +27,6 @@ export function InfoPage() {
         });
         fetchData();
     }, [location.pathname]);
-
-    async function fetchData() {
-        try {
-            const response = await axios.get("/api/car-cards");
-            const carCards: CarCardsType[] = response.data;
-            const shuffled = [...carCards].sort(() => 0.5 - Math.random());
-            const selected = shuffled.slice(0, 6);
-
-            setData(selected);
-        } catch (error) {
-            setData(testData);
-            console.error("Ошибка при получении данных: сервер недоступен", error);
-        }
-    }
 
     const car = newTestData.find(i => i.id === Number(id));
 
