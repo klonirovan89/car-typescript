@@ -7,12 +7,10 @@ import {GoTopButton, Modal} from "../../components";
 import {CarServices} from "./car-services";
 import {CardsCars} from "../home-page/sections/car-box/cards-cars";
 import {CarCardsType} from "../../consts/types";
-import axios from "axios";
-
+import {ReportForm} from "../../components/report-form";
 
 import '../../styles/globalStyles.scss';
 import s from "./index.module.scss";
-import {ReportForm} from "../../components/report-form";
 
 export function InfoPage() {
     const {id} = useParams();
@@ -25,7 +23,6 @@ export function InfoPage() {
             top: 0,
             behavior: 'auto'
         });
-        fetchData();
     }, [location.pathname]);
 
     const car = newTestData.find(i => i.id === Number(id));
