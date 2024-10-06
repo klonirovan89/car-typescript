@@ -8,27 +8,7 @@ import {testData} from "../../../../consts";
 import s from "./index.module.scss"
 
 export function CarBox () {
-    const [data, setData] = useState<CarCardsType[] | undefined>(undefined);
-
-
-    useEffect(() => {
-        fetchData();
-    }, []);
-
-    async function fetchData() {
-        try {
-            const response = await axios.get("/api/car-cards");
-            const carCards: CarCardsType[] = response.data;
-            const shuffled = [...carCards].sort(() => 0.5 - Math.random());
-            const selected = shuffled.slice(0, 6);
-
-            setData(selected);
-        } catch (error) {
-            setData(testData);
-            console.error("Ошибка при получении данных: сервер недоступен", error);
-        }
-    }
-
+    const [data, setData] = useState<CarCardsType[] | undefined>(testData);
     return (
         <Element name={'carBox'} className={s.car_box}>
             <div className={s.car_box_text}>
