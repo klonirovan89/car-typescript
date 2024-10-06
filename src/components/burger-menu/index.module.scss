@@ -1,0 +1,68 @@
+.button_menu {
+  cursor: pointer;
+  position: fixed;
+  width: 35px;
+  height: 25px;
+  top: 25px;
+  right: 25px;
+  transition: 0.3s ease-in-out;
+
+  span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: var(--light-100);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease-in-out;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: var(--light-100);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s ease-in-out;
+  }
+
+  &::before {
+    top: calc(50% - 12px);
+  }
+
+  &::after {
+    top: calc(50% + 8px);
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:hover span{
+    background-color: var(--primary-200);
+
+  }
+
+  &.open {
+    z-index: 99999999;
+
+    span {
+      transform: translate(-50%, -50%) rotate(45deg);
+      opacity: 0;
+    }
+  }
+
+  &.open::before {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &.open::after {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}

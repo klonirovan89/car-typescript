@@ -1,0 +1,235 @@
+.header {
+  height: 80px;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #ffffff19;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  transition: 1s;
+}
+
+.header.scrolled {
+  transition: 1s;
+  background-color: rgba(0, 0, 0, 0.8507);
+  padding: 0 20px;
+}
+
+.navigate {
+  width: 100%;
+  max-width: 725px;
+  display: flex;
+  margin: 0 38px;
+  align-items: center;
+  gap: 25px;
+}
+
+.navigate .btn_flip {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.5px;
+  text-align: left;
+  color: var(--light-100);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 10px;
+  margin-top: 15px;
+  transition: 0.5s ease;
+  text-decoration: none;
+  animation-timing-function: ease-out;
+  animation-duration: 100ms;
+  white-space: nowrap;
+}
+
+.navigate .btn_flip:hover {
+  cursor: pointer;
+  transition: 0.5s ease;
+  border-bottom: 1px solid var(--primary-200);
+}
+
+.logo_nav {
+  display: flex;
+  height: 100%;
+  width: 80%;
+  flex-direction: row;
+  align-items: center;
+}
+
+.line {
+  width: calc((100vw - 360px)/(1500 - 360) * (400 - 200) + 200px);
+  height: 3px;
+  background-color: var(--primary-200);
+}
+
+.navigate .btn_flip.active {
+  transition: 2s ease;
+  border-bottom: 1px solid var(--primary-200);
+}
+
+.question {
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+  .vector_phone {
+    margin: 0 25px;
+  }
+
+  @media (max-width: 1300px) {
+    .vector_phone {
+      margin: 0 10px 0 20px;
+    }
+  }
+}
+
+.contact_us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17.07px;
+    letter-spacing: 0.07em;
+    text-align: center;
+
+  }
+}
+
+.question_info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--light-100);
+
+  p {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18.29px;
+    letter-spacing: 0.07em;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+
+  a {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.94px;
+    letter-spacing: 0.07em;
+    text-align: left;
+    text-decoration: none;
+    color: var(--light-100);
+    white-space: nowrap;
+
+  }
+
+  a:hover {
+    transition: 0.4s;
+    color: var(--primary-200);
+  }
+
+  @media (max-width: 1300px) {
+    a {
+      font-size: 16px;
+    }
+  }
+
+}
+
+
+
+.contact_us_mobile {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  .question {
+    align-items: flex-start;
+  }
+
+  button {
+    height: 100px;
+    padding: 0 22px;
+    max-width: 250px;
+    font-size: calc((100vw - 360px) / (1500 - 360) * (24 - 18) + 18px);
+  }
+
+  .vector_phone {
+    width: 50px;
+    height: 50px;
+
+  }
+
+  .question_info {
+    padding-right: 25px;
+    display: flex;
+    gap: 15px;
+
+    p {
+      font-size: calc((100vw - 360px) / (1500 - 360) * (24 - 18) + 18px);
+    }
+
+    a {
+      font-size: calc((100vw - 360px) / (1500 - 360) * (30 - 22) + 22px);
+    }
+  }
+}
+
+.navigate_mobile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.navigate_mobile .btn_flip {
+  font-size: 40px;
+  color: var(--light-100);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 10px;
+  margin-top: 15px;
+  transition: 0.5s ease;
+  text-decoration: none;
+  animation-timing-function: ease-out;
+  animation-duration: 100ms;
+  white-space: nowrap;
+}
+
+.navigate_mobile .btn_flip:hover {
+  cursor: pointer;
+  transition: 0.5s ease;
+  border-bottom: 1px solid var(--primary-200);
+}
+
+.wrapper_mobile {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 650px) {
+  .wrap {
+    width: 100%;
+    float: left;
+  }
+
+  .navigate_mobile {
+    gap: 15px;
+
+    .btn_flip {
+      font-size: calc((100vw - 360px) / (1500 - 360) * (40 - 22) + 22px);
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .wrap {
+    width: 100%;
+    float: left;
+  }
+}

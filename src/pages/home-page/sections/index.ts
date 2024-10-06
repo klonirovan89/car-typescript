@@ -1,0 +1,7 @@
+export { AboutUs } from './about-us'
+export { CarBox } from './car-box'
+export { Home } from './home'
+export { Services } from './services'
+export { CarInfo } from './car-info'
+export { AboutServices } from './about-services'
+export { Contact } from './contact'

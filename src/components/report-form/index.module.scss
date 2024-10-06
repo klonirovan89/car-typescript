@@ -1,0 +1,311 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 21px;
+  justify-content: center;
+  margin-top: 235px;
+  padding: 0 20px;
+  overflow-x: hidden;
+}
+
+
+.report_box {
+  width: calc(100% - 60px);
+  height: calc(85% - 40px);
+  max-width: 944px;
+  max-height: 645px;
+  background: var(--light-100);
+  box-shadow: 0 15px 25px #0000001A;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  overflow-y: auto;
+  margin-left: 29px;
+
+  &.active {
+    transition: 0.3s;
+    transition-delay: 0.4s;
+    opacity: 1;
+    z-index: 102;
+    pointer-events: all;
+  }
+}
+
+.report_header {
+  width: 100%;
+  height: 165px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 63px 83px 52px 83px;
+
+  h4 {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: start;
+    color: #363636;
+  }
+
+  h5 {
+    font-size: 17px;
+    font-weight: 400;
+    text-align: start;
+    color: #949494;
+  }
+
+  .report_block {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+    svg {
+      fill: var(--primary-200);
+    }
+  }
+
+  .report_block_1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+  }
+
+  .report_block_2 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: end;
+  }
+}
+
+.report_body {
+  height: 480px;
+  background-color: #F3F4F6;
+  padding: 0 83px;
+
+  .report_title {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: start;
+    line-height: 39.1px;
+    padding: 27px 0 56px 0;
+  }
+
+  .report_car_services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+  }
+
+  .report_car_service {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .report_car_services_icon {
+    cursor: pointer;
+    fill: none;
+  }
+
+  .report_car_service_text {
+    cursor: pointer;
+    padding-left: 12px;
+
+    h3 {
+      font-weight: 500;
+      font-size: 16px;
+      color: #363636;
+      transition: color 0.3s;
+    }
+
+    h5 {
+      font-weight: 400;
+      font-size: 12px;
+      color: #949494;
+      margin-top: 5px;
+      transition: color 0.3s;
+    }
+
+    &:hover {
+      h3, h5 {
+        color: var(--primary-200);
+      }
+    }
+  }
+
+  .report_car_services_icon:hover + .report_car_service_text h3,
+  .report_car_services_icon:hover + .report_car_service_text h5 {
+    color: var(--primary-200);
+  }
+}
+
+.report_btn {
+  width: 100%;
+  max-width: 1248px;
+  height: 70px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 30.6px;
+  background-color: #275CD4;
+  color: var(--light-100);
+  white-space: nowrap;
+  border-radius: 5px;
+  transition: background-color 0.4s ease-in-out;
+  cursor: pointer;
+  margin-top: 47px;
+
+  &:hover {
+    background-color: #415FF3;
+  }
+}
+
+.cross {
+  fill: var(--light-100);
+  cursor: pointer;
+
+  &:hover {
+    fill: var(--primary-200);
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    margin-top: 150px;
+  }
+}
+
+
+@media (max-width: 950px) {
+  .report_header {
+    height: 90px;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+
+    .report_block {
+      svg {
+        min-width: 54px;
+        min-height: 54px;
+        fill: var(--primary-200);
+      }
+    }
+
+    .report_block_1 {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      align-items: start;
+    }
+
+    .report_block_2 {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      align-items: flex-start;
+    }
+  }
+
+  .report_body {
+    height: 555px;
+    padding: 0 20px;
+
+    .report_title {
+      width: 335px;
+      font-size: 24px;
+      padding: 20px 0;
+      margin: 0 auto;
+    }
+
+    .report_car_services {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      row-gap: 20px;
+    }
+
+    .report_car_service {
+      width: 335px;
+    }
+  }
+
+  .report_btn {
+    margin-top: 20px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 660px) {
+  .wrapper {
+    margin-top: 100px;
+    padding: 0 10px;
+  }
+
+  .report_box {
+    max-height: 665px;
+  }
+
+  .report_header {
+    height: 128px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+
+
+    h4 {
+      font-size: 18px;
+    }
+
+    h5 {
+      font-size: 14px;
+    }
+
+
+    .report_block {
+      svg {
+        min-width: 34px;
+        min-height: 34px;
+      }
+    }
+  }
+
+  .report_body {
+    height: 537px;
+  }
+}
+
+@media (max-width: 465px) {
+  .report_header {
+    padding: 10px;
+
+    .report_block {
+      svg {
+        min-width: 24px;
+        min-height: 24px;
+      }
+    }
+  }
+  .report_body {
+      height: 600px;
+
+    .report_title{
+      width: 100%;
+    }
+
+    .report_car_services {
+      row-gap: 15px;
+    }
+
+    .report_car_service {
+      width: 100%;
+    }
+
+    .report_car_service_text {
+      text-wrap: wrap;
+    }
+  }
+}

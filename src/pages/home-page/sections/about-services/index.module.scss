@@ -1,0 +1,161 @@
+.about_services_wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 98px 0;
+  padding: 0 20px;
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1247px;
+  gap: 31px;
+}
+
+.blue_text {
+  color: var(--primary-200);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20.77px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  display: flex;
+  align-items: center;
+
+  div {
+    margin-left: 15px;
+    width: 116px;
+    height: 2px;
+    top: 192px;
+    left: 1382px;
+    background-color: var(--primary-200);
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.about_services {
+  max-width: 608px;
+  max-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 56px;
+
+  h3 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 57.6px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    color: var(--primary-800);
+    margin-top: 12px;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 27.2px;
+    text-align: left;
+    margin: 21px 0 37px 0;
+    color: #7B859BD9;
+
+  }
+}
+
+.about_services_item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+
+  .service_img {
+    width: 100%; /* Ширина 100% для резинового изображения */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    overflow: hidden;
+
+    .img {
+      object-fit: cover;
+      width: 100%; /* Ширина 100% для изображения внутри контейнера */
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  h5 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 42.5px;
+    text-align: left;
+    color: #000000;
+    margin: 23px 0 4px 0;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 27.2px;
+    text-align: left;
+    color: var(--dark-100);
+  }
+
+  &:hover {
+    .img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.about_services_btn {
+  width: 232px;
+  height: 54px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 19.2px;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+}
+
+@media (max-width: 1286px) {
+  .about_services {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 880px) {
+  .services {
+    flex-direction: column;
+    gap: 42px;
+  }
+
+  .about_services {
+    max-height: 100%;
+
+    h3 {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 53.76px;
+    }
+
+    h4 {
+      margin: 29px 0 37px 0;
+    }
+  }
+
+  .about_services_item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+
+    .service_img {
+      width: 100%; /* Убедитесь, что ширина остается 100% на мобильных устройствах */
+      height: auto;
+    }
+  }
+}

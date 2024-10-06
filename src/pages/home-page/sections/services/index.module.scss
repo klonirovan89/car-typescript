@@ -1,0 +1,286 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 72px 0;
+  padding: 0 20px;
+}
+
+.blue_text {
+  color: var(--primary-200);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20.77px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  display: flex;
+  align-items: center;
+
+  div {
+    margin-left: 15px;
+    width: 116px;
+    height: 2px;
+    top: 192px;
+    left: 1382px;
+    background-color: var(--primary-200);
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.about_services {
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    width: 466px;
+    max-height: 125px;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 57.6px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    color: var(--primary-800);
+    padding-top: 14px;
+  }
+
+  h4 {
+    max-width: 636px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 27.2px;
+    text-align: left;
+    padding-left: 10px;
+    color: #7B859BD9;
+
+  }
+}
+
+.services_group {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 46px 0;
+}
+
+.services_item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 287px;
+  max-height: 375px;
+  border-radius: 5px;
+  box-shadow: 0 0 30px 0 #0000000D;
+
+  &:nth-child(even) {
+    margin-top: 52px;
+  }
+
+  .icon {
+    margin: 53px 0 28px 39px;
+  }
+
+  h5 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30.6px;
+    text-align: left;
+    color: #000000;
+    margin: 0 0 19px 39px;
+  }
+
+  p {
+    max-height: 78px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25.5px;
+    text-align: left;
+    color: var(--dark-100);
+    margin: 0 39px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* количество строк */
+    -webkit-box-orient: vertical;
+  }
+
+  .description_link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 11px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    margin: 29px 0 48px 39px;
+
+    span {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 23.8px;
+      color: var(--primary-200);
+      padding-right: 6px;
+    }
+
+    svg {
+      fill: var(--primary-200);
+    }
+
+    &:hover {
+      border-bottom: 1px solid rgba(38, 97, 233, 0.85);
+      transition: 0.3s;
+
+      span {
+        color: rgba(38, 97, 233, 0.85);
+        transition: 0.3s;
+      }
+
+      svg {
+        fill: rgba(38, 97, 233, 0.85);
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+
+.link_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  width: 100%;
+  transition: 0.3s;
+
+  .link {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 23.8px;
+    transition: 0.3s;
+    position: relative;
+
+    span {
+      color: var(--primary-200);
+      padding-right: 6px;
+    }
+
+    span:first-child {
+      color: var(--dark-200);
+      padding-right: 16px;
+    }
+
+    svg {
+      position: absolute;
+      fill: var(--primary-200);
+      transition: 0.3s;
+      right: -15px;
+      top: 3px;
+    }
+
+    &:hover {
+      svg {
+        margin-left: 6px;
+        right: -25px;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.link_box:has(.link:hover) {
+  border-bottom: 1px solid #00000029;
+  transition: 0.3s;
+}
+
+@media (max-width: 1200px) {
+  .about_services {
+    justify-content: center;
+  }
+
+  .services_group {
+    gap: 36px;
+    margin: 61px 0 36px 0;
+  }
+
+  .services_item {
+    max-width: 466px;
+
+    &:nth-child(even) {
+      margin-top: 0;
+    }
+
+    .icon {
+      width: 86px;
+      height: 86px;
+      margin: 46px 0 14px 39px;
+    }
+
+    h5 {
+      font-size: 25px;
+      line-height: 42.5px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 34px;
+      max-height: 68px;
+    }
+
+    .description_link {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .services {
+    margin: 42px 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .about_services {
+    h3 {
+      width: 100%;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 38.4px;
+    }
+  }
+
+  .services_group {
+    margin-top: 20px;
+
+    .services_item {
+      .icon {
+        width: 65px;
+        height: 65px;
+      }
+
+      h5 {
+        font-size: 18px;
+        line-height: 30.6px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 25.5px;
+        max-height: 78px;
+      }
+
+      .description_link {
+        margin-top: 29px;
+      }
+    }
+  }
+}

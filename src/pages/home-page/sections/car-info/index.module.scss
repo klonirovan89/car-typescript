@@ -1,0 +1,308 @@
+.car_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 83px 0 112px 0;
+  padding: 0 20px;
+}
+
+.car_info_text {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 45px;
+  text-align: center;
+
+  h4 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20.77px;
+    letter-spacing: -0.04em;
+    color: var(--primary-200);
+  }
+
+  h3 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 57.6px;
+    color: var(--primary-800);
+    margin: 16px 0 20px 0;
+  }
+
+  h5 {
+    max-width: 879px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 27.2px;
+    color: var(--dark-100);
+  }
+}
+
+.image_wrapper {
+  position: relative;
+}
+
+.car_img {
+  max-width: 1117px;
+  width: 100%;
+}
+
+.buttons {
+  position: absolute;
+  top: 0;
+  left: 300px;
+}
+
+.button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-200);
+  cursor: pointer;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border: 2px solid #2681e9;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-200);
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+  }
+
+  &:hover::after {
+    background-color: #2681e9;
+  }
+
+  &.active::after {
+    width: 18px;
+    height: 18px;
+  }
+
+  &.button1 {
+    top: 200px;
+    left: -130px;
+  }
+
+  &.button2 {
+    top: 50px;
+    left: 160px;
+  }
+
+  &.button3 {
+    top: 330px;
+    left: 140px;
+  }
+
+  &.button4 {
+    top: 175px;
+    left: 330px;
+  }
+
+  &.button5 {
+    top: 155px;
+    left: 540px;
+  }
+}
+
+.info_block {
+  background-color: #252525;
+  position: absolute;
+  width: 300px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 35px;
+  z-index: 3;
+  transition: top 0.5s ease, left 0.5s ease;
+
+
+  h5 {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 25.66px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    color: #FFFFFF;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25.92px;
+    text-align: left;
+    color: #7A7A7A;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .car_img {
+    width: 800px;
+    height: 100%;
+  }
+
+  .button {
+    &.button1 {
+      top: 140px;
+      left: -180px;
+    }
+
+    &.button2 {
+      top: 30px;
+      left: 20px;
+    }
+
+    &.button3 {
+      top: 235px;
+      left: 10px;
+    }
+
+    &.button4 {
+      top: 120px;
+      left: 155px;
+    }
+
+    &.button5 {
+      top: 105px;
+      left: 300px;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .car_info_text {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+
+    h3 {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 38.4px;
+      color: var(--primary-800);
+      margin: 14px 0 16px 0;
+    }
+  }
+
+  .car_img {
+    width: 495px;
+    height: 100%;
+  }
+
+  .button {
+    &.button1 {
+      top: 80px;
+      left: -230px
+    }
+
+    &.button2 {
+      top: 10px;
+      left: -110px;
+    }
+
+    &.button3 {
+      top: 140px;
+      left: -120px;
+    }
+
+    &.button4 {
+      top: 70px;
+      left: -30px;
+    }
+
+    &.button5 {
+      top: 60px;
+      left: 65px;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .car_img {
+    width: 320px;
+    height: 100%;
+  }
+
+  .button {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--primary-200);
+
+    &::after {
+      width: 5px;
+      height: 5px;
+    }
+
+    &.active::after {
+      width: 7px;
+      height: 7px;
+    }
+
+    &.button1 {
+      top: 50px;
+      left: -255px;
+    }
+
+    &.button2 {
+      top: 5px;
+      left: -180px;
+    }
+
+    &.button3 {
+      top: 90px;
+      left: -185px;
+    }
+
+    &.button4 {
+      top: 40px;
+      left: -125px;
+    }
+
+    &.button5 {
+      top: 35px;
+      left: -70px;
+    }
+  }
+
+  .info_block {
+    max-width: 150px;
+    height: 270px;
+    padding: 10px 10px;
+    z-index: 3;
+    transition: top 0.5s ease, left 0.5s ease;
+
+    h5 {
+      font-size: 21px;
+      font-weight: 800;
+      line-height: 25.66px;
+      letter-spacing: -0.04em;
+      text-align: left;
+      color: #FFFFFF;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 23.8px;
+      text-align: left;
+      color: #7A7A7A;
+      margin-top: 5px;
+    }
+  }
+}

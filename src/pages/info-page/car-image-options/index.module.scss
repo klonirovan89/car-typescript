@@ -1,0 +1,43 @@
+.car_options_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 28px;
+  height: 37px;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.car_options_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 23px;
+  max-width: 300px;
+}
+
+.car_option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  gap: 5px;
+
+  svg {
+    cursor: pointer;
+  }
+
+  h3 {
+    font-weight: 500;
+    line-height: 21px;
+    font-size: 13px;
+    color: #000000;
+  }
+
+  &:hover h3{
+    color: var(--primary-200);
+  }
+}

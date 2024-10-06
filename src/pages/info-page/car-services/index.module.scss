@@ -1,0 +1,89 @@
+.car_services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 22px;
+  max-width: 1248px;
+}
+
+.car_service {
+  display: flex;
+  flex-direction: row;
+}
+
+.car_services_icon {
+  cursor: pointer;
+  fill: none;
+  min-width: 21px;
+  margin-top: 9px;
+}
+
+.car_service_text {
+  cursor: pointer;
+  padding-left: 12px;
+
+  h3 {
+    font-weight: 500;
+    font-size: 16px;
+    color: #363636;
+    transition: color 0.3s;
+  }
+
+  h5 {
+    font-weight: 400;
+    font-size: 12px;
+    color: #949494;
+    margin-top: 2px;
+    transition: color 0.3s;
+  }
+
+  &:hover {
+    h3, h5 {
+      color: var(--primary-200);
+    }
+  }
+}
+
+.car_services_icon:hover + .car_service_text h3,
+.car_services_icon:hover + .car_service_text h5 {
+  color: var(--primary-200);
+}
+
+@media (max-width: 1264px) {
+  .car_services {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 43px;
+  }
+
+  .car_service_text {
+    padding-left: 9px;
+
+    h3 {
+      font-size: 17px;
+    }
+
+    h5 {
+      font-size: 13px;
+      margin-top: 1px;
+    }
+  }
+}
+
+@media (max-width: 582px) {
+  .car_services {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 22px;
+  }
+
+  .car_service_text {
+    padding-left: 9px;
+
+    h3 {
+      font-size: 16px;
+    }
+
+    h5 {
+      font-size: 12px;
+      margin-top: 2px;
+    }
+  }
+}

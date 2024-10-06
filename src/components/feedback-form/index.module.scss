@@ -1,0 +1,308 @@
+.login_box {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  right: 20px;
+  width: calc(100% - 60px);
+  height: calc(85% - 40px);
+  max-width: 800px;
+  max-height: 870px;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  background: var(--light-100);
+  box-shadow: 0 15px 25px #0000001A;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  overflow-y: auto;
+
+  &.active {
+    transition: 0.3s;
+    transition-delay: 0.4s;
+    opacity: 1;
+    top: 55%;
+    z-index: 102;
+    margin-bottom: 0;
+    pointer-events: all;
+  }
+
+  &.submitted {
+    max-height: 470px;
+    transition: max-height 0.8s ease;
+  }
+
+  .user_box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cross {
+    position: absolute;
+    content: "";
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    width: 37px;
+    height: 35px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      rotate: 45deg;
+      width: 40px;
+      height: 6px;
+      top: 15px;
+      background-color: #D9D9D9;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      rotate: -45deg;
+      width: 40px;
+      height: 6px;
+      top: 15px;
+      background-color: #D9D9D9;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: var(--dark-200);
+    }
+  }
+
+  .title_form {
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 56.1px;
+    text-align: center;
+  }
+
+  .message_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+
+    .message {
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-size: 33px;
+        font-weight: 600;
+        line-height: 56px;
+        text-align: center;
+        color: var(--primary-200);
+        padding-top: 7px;
+      }
+
+      span {
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 36px;
+        text-align: center;
+        padding: 10px 80px 60px 80px;
+      }
+    }
+  }
+
+  .submit_btn {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 26.88px;
+    text-align: center;
+  }
+}
+
+.contact_login_box {
+  width: 433px;
+  height: 519px;
+  padding: 15px 52px 30px 52px;
+  margin-top: 33px;
+  background: var(--light-100);
+  box-shadow: 0 0 20px 0 #0000001A;
+
+  border-radius: 12px;
+  overflow-y: auto;
+
+
+  &.submitted {
+    max-height: 470px;
+    transition: max-height 0.8s ease;
+  }
+
+  .user_box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+  }
+
+  .title_form {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 42.5px;
+    text-align: left;
+    margin-bottom: 13px;
+  }
+
+  .message_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.9s ease;
+
+    .message {
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-size: 33px;
+        font-weight: 600;
+        line-height: 56px;
+        text-align: center;
+        color: var(--primary-200);
+        padding-top: 7px;
+      }
+
+      span {
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 36px;
+        text-align: center;
+        padding: 10px 80px 60px 80px;
+      }
+    }
+  }
+
+  .submit_btn {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width: 1297px) {
+  .contact_login_box {
+    width: 100%;
+    max-width: 369px;
+    height: 540px;
+    padding: 40px 52px 47px 52px;
+
+    &.submitted {
+      max-height: 540px;
+    }
+
+    .submit_btn {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 23.04px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .contact_login_box {
+    max-width: 300px;
+    height: 560px;
+    padding: 20px 20px;
+
+    &.submitted {
+      max-height: 560px;
+    }
+
+    .submit_btn {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 19.2px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .login_box {
+    .cross {
+      top: 20px;
+      right: 20px;
+    }
+
+    .title_form {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 40px;
+    }
+
+    .user_box {
+      gap: 15px;
+    }
+
+    .message_box {
+
+      .message {
+        h1 {
+          font-size: 28px;
+          line-height: 50px;
+        }
+
+        span {
+          font-size: 21px;
+          line-height: 30px;
+          padding: 10px 60px 40px 60px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 521px) {
+  .login_box {
+    .cross {
+      top: 14px;
+      right: 14px;
+    }
+
+    .title_form {
+      font-size: 23px;
+      font-weight: 600;
+      line-height: 40px;
+    }
+
+    button {
+      font-size: 16px;
+    }
+
+    .message_box {
+
+      .message {
+        h1 {
+          font-size: 30px;
+          line-height: 40px;
+        }
+
+        span {
+          font-size: 18px;
+          line-height: 30px;
+          padding: 10px 10px 40px 10px;
+        }
+      }
+    }
+  }
+}
+
+.login_box.submitted .message_box {
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}
+
+.contact_login_box.submitted .message_box {
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}

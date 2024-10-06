@@ -1,0 +1,141 @@
+.carPage {
+  max-width: 822px;
+  position: relative;
+
+  .img {
+    cursor: pointer;
+    width: 100%;
+    height: 505px;
+  }
+
+  .thumbnails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    overflow-x: auto
+  }
+
+  .thumbnail {
+    cursor: pointer;
+    width: 151px;
+    height: 108px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+
+    &:hover {
+      border: 2px solid var(--primary-200);
+    }
+  }
+
+  .active_thumbnail {
+    border: 2px solid var(--primary-200);
+  }
+
+  .controls {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 19px;
+    width: 100%;
+    transform: translateY(-50%);
+
+    .arrow {
+      cursor: pointer;
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      background-color: #E9F1FD;
+      transition: 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        stroke: #6F7FA8;
+        transition: 0.3s;
+      }
+
+      &:hover {
+        background-color: var(--primary-200);
+
+        svg {
+          stroke: #E9F1FD;
+        }
+      }
+    }
+
+    .arrow_left {
+      svg {
+        transform: translateX(-1px);
+      }
+    }
+
+    .arrow_right {
+      svg {
+        transform: translateX(1px);
+      }
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .carPage {
+    max-width: 544px;
+
+    .img {
+      height: 355px;
+    }
+
+    .thumbnails {
+      &::-webkit-scrollbar {
+        cursor: pointer;
+        height: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        cursor: pointer;
+      }
+    }
+
+    .thumbnail {
+      width: 174px;
+      height: 126px;
+    }
+
+    .controls {
+      top: 30%;
+      padding: 0 10px;
+
+      .arrow {
+        width: 23px;
+        height: 23px;
+
+        svg {
+          width: 5px;
+          height: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 582px) {
+  .carPage {
+    max-width: 340px;
+
+    .img {
+      height: auto;
+    }
+
+    .thumbnail {
+      width: 109px;
+      height: auto;
+    }
+  }
+}
